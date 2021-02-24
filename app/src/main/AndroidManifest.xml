@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.czt.mp3recorder.util">
+    package="com.zcc.mp3recorder.util">
 
     <application
         android:allowBackup="true"

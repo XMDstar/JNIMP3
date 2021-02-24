@@ -11,7 +11,7 @@ static lame_global_flags *glf = NULL;
 
 //初始化
 extern "C" JNIEXPORT void JNICALL
-Java_com_czt_mp3recorder_util_LameUtil_init(JNIEnv *env, jclass type, jint inSampleRate,
+Java_com_zcc_mp3recorder_util_LameUtil_init(JNIEnv *env, jclass type, jint inSampleRate,
                                             jint outChannel, jint outSampleRate, jint outBitrate,
                                             jint quality) {
     if (glf != NULL) {
@@ -34,7 +34,7 @@ Java_com_czt_mp3recorder_util_LameUtil_init(JNIEnv *env, jclass type, jint inSam
 
 // 编码
 extern "C" JNIEXPORT jint JNICALL
-Java_com_czt_mp3recorder_util_LameUtil_encode(JNIEnv *env, jclass type,
+Java_com_zcc_mp3recorder_util_LameUtil_encode(JNIEnv *env, jclass type,
                                               jshortArray buffer_l_,
                                               jshortArray
                                               buffer_r_,
@@ -64,7 +64,7 @@ Java_com_czt_mp3recorder_util_LameUtil_encode(JNIEnv *env, jclass type,
 
 //刷新
 extern "C" JNIEXPORT jint JNICALL
-Java_com_czt_mp3recorder_util_LameUtil_flush(JNIEnv *env, jclass type,
+Java_com_zcc_mp3recorder_util_LameUtil_flush(JNIEnv *env, jclass type,
                                              jbyteArray mp3buf_) {
     jbyte *mp3buf = env->GetByteArrayElements(mp3buf_, NULL);
 
@@ -80,7 +80,7 @@ Java_com_czt_mp3recorder_util_LameUtil_flush(JNIEnv *env, jclass type,
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_com_czt_mp3recorder_util_LameUtil_close(JNIEnv
+Java_com_zcc_mp3recorder_util_LameUtil_close(JNIEnv
                                              *env,
                                              jclass type) {
     lame_close(glf);
@@ -89,6 +89,6 @@ Java_com_czt_mp3recorder_util_LameUtil_close(JNIEnv
 
 //版本号
 extern "C" jstring
-Java_com_czt_mp3recorder_util_LameUtil_getLameVersion(JNIEnv *env, jclass type) {
+Java_com_zcc_mp3recorder_util_LameUtil_getLameVersion(JNIEnv *env, jclass type) {
     return env->NewStringUTF(get_lame_version());
 }

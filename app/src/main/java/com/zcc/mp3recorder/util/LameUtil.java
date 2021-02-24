@@ -1,10 +1,9 @@
-package com.czt.mp3recorder.util;
+package com.zcc.mp3recorder.util;
 
 /**
- * Copyright:好未来集团
  * FileName: LameUtil
  * Date: 2/18/21 4:33 PM
- * Description:
+ * Description:java调用工具类
  *
  * @author zcc
  */

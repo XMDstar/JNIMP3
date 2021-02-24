@@ -1,4 +1,4 @@
-package com.czt.mp3recorder.util;
+package com.zcc.mp3recorder.util;
 
 import android.media.AudioFormat;
 import android.os.Bundle;
@@ -18,7 +18,6 @@ import java.nio.ByteOrder;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * Company:好未来集团
  * ClassName: MainActivity
  * Author: zcc
  * Date: 2/23/21 5:21 PM
